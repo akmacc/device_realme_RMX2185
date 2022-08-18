@@ -16,8 +16,8 @@
 
 DEVICE_PATH := device/realme/RMX2185
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+# Include Developer GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/RMX2185/RMX2185-vendor.mk)
